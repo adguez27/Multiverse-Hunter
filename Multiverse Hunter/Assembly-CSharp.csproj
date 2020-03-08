@@ -64,8 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_MultiverseHunter\Armas\Scripts\armas_controller_script.cs" />
-    <Compile Include="Assets\_MultiverseHunter\Artículos\Articulos_Municion_Script.cs" />
-    <Compile Include="Assets\_MultiverseHunter\Artículos\Artículos_Salud_Script.cs" />
+    <Compile Include="Assets\_MultiverseHunter\Artículos\Scripts\Articulos_Municion_Script.cs" />
+    <Compile Include="Assets\_MultiverseHunter\Artículos\Scripts\Artículos_Salud_Script.cs" />
     <Compile Include="Assets\_MultiverseHunter\Balas\Scripts\Misil.cs" />
     <Compile Include="Assets\_MultiverseHunter\Balas\Scripts\balas_controller_script.cs" />
     <Compile Include="Assets\_MultiverseHunter\Camara\Camara_Seguimiento.cs" />
