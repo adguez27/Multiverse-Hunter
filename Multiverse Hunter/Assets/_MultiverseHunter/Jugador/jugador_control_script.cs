@@ -16,11 +16,11 @@ public class jugador_control_script : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
     }
-
+    
     void Update()
     {
    
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), gravity*-1, Input.GetAxis("Vertical"));
         moveDirection *= speed;
        
         
@@ -28,7 +28,7 @@ public class jugador_control_script : MonoBehaviour
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
-        moveDirection.y -= gravity * Time.deltaTime;
+       // moveDirection.y -= gravity * Time.deltaTime;
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
