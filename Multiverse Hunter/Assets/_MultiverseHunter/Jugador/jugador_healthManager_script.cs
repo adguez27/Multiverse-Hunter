@@ -10,6 +10,7 @@ public class jugador_healthManager_script : MonoBehaviour
     public float flashLength;
     private float flashCounter;
 
+
     private Renderer rend;
     private Color originalColor;
     // Start is called before the first frame update
