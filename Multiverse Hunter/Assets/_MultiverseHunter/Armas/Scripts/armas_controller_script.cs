@@ -20,7 +20,11 @@ public class armas_controller_script : MonoBehaviour
     public float reloadTime = 1f;
     public float reloadCounter = 1f;
 
+
     public Text textoMunición;
+
+    public bool infiniteAmmo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,75 +38,89 @@ public class armas_controller_script : MonoBehaviour
         shotCounter -= Time.deltaTime;
         if (reloadCounter <= 0)
         {
-            
+
             if (isFiring == true)
             {
 
                 if (shotCounter <= 0 && currentAmmo >= 1)
                 {
                     Shoot();
+
                     textoMunición.text = currentAmmo.ToString() + "/" + reserveAmmo.ToString();
+
                 }
 
             }
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Reload();
+
                 textoMunición.text = currentAmmo.ToString() + "/" + reserveAmmo.ToString();
+
             }
         }
     }
     void Shoot()
     {
-       
+
         shotCounter = timeBetweenShots;
         GameObject newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as GameObject;
         balas_controller_script controller = (balas_controller_script)newBullet.GetComponent("balas_controller_script");
         controller.speed = BulletSpeed;
         if (Random.Range(0f, 100f) <= critChance)
         {
-            
+
             controller.damage = (int) (damage * critDamage);
-           
-           
+
+
         }
         else
         {
             controller.damage = (int)damage;
             Debug.DrawLine(newBullet.transform.position, newBullet.transform.position, Color.blue);
         }
-       
+
         currentAmmo -= 1;
     }
     void Reload()
     {
         reloadCounter = reloadTime;
-        if (currentAmmo == 0)
-        {
-            if (reserveAmmo >= maxAmmo)
+
+        if (infiniteAmmo == false) {
+            if (currentAmmo == 0)
             {
-                currentAmmo = maxAmmo;
-                reserveAmmo -= maxAmmo;
+                if (reserveAmmo >= maxAmmo)
+                {
+                    currentAmmo = maxAmmo;
+                    reserveAmmo -= maxAmmo;
+                }
+                else
+                {
+                    currentAmmo = reserveAmmo;
+                    reserveAmmo = 0;
+                }
             }
             else
             {
-                currentAmmo = reserveAmmo;
-                reserveAmmo = 0;
+                float ammoNeeded = maxAmmo - currentAmmo;
+                if (reserveAmmo >= ammoNeeded)
+                {
+                    currentAmmo = maxAmmo;
+                    reserveAmmo -= ammoNeeded;
+                }
+                else
+                {
+                    currentAmmo += reserveAmmo;
+                    reserveAmmo = 0;
+                }
+
             }
         }
         else
         {
-            float ammoNeeded = maxAmmo - currentAmmo;
-            if(reserveAmmo >= ammoNeeded)
-            {
-                currentAmmo = maxAmmo;
-                reserveAmmo -= ammoNeeded;
-            }
-            else
-            {
-                currentAmmo += reserveAmmo;
-                reserveAmmo = 0;
-            }
+
+            currentAmmo = maxAmmo;
+
         }
     }
 

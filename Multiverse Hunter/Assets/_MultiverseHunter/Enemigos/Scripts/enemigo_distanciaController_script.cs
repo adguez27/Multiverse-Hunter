@@ -77,24 +77,3 @@ public class enemigo_distanciaController_script : MonoBehaviour
         }
     }
 }
-
-
-    // Update is called once per frame
-    /*void Update()
-    {
-        Debug.DrawLine(target.position, myTransform.position);
-        //Look at target
-        Vector3 dir = target.position - myTransform.position;
-        dir.y = 0.0f;
-        float currentDistance = Vector3.Distance(myTransform.position, target.position);
-        
-        {
-
-
-            //Move towards target
-            if (currentDistance >= distance)
-            {
-                myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
-            }
-        }
-    }*/
