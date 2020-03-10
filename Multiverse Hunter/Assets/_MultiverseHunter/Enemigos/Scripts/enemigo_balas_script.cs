@@ -25,5 +25,11 @@ public class enemigo_balas_script : MonoBehaviour
             collision.gameObject.GetComponent<jugador_healthManager_script>().HurtPlayer(damage);
             Destroy(gameObject);
         }
+
+        else if (collision.gameObject.tag == "Obstacle")
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

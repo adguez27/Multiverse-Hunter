@@ -5,39 +5,47 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+
+  - Obstacle
+  - Item
+
+
+
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  -
   - Water
   - UI
-  - 
-  - 
+  -
+  -
   - Enemigo
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+
+  - Jugador
+
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
   m_SortingLayers:
   - name: Default
     uniqueID: 0

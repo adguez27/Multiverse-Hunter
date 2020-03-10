@@ -6,7 +6,7 @@ public class balas_controller_script : MonoBehaviour
 {
     public float speed = 100;
     public int damage = 700;
-    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +23,14 @@ public class balas_controller_script : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-           
+
+            gameObject.GetComponent<BoxCollider>().isTrigger = false;
             collision.gameObject.GetComponent<enemig_healthManager_script>().HurtEnemy(damage);
             Destroy(gameObject);
         }
+        else if (collision.gameObject.tag == "Obstacle"){
+            Destroy(gameObject);
+        }
+
     }
 }
