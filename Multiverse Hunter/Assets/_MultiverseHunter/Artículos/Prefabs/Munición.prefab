@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1545824940935385852}
   - component: {fileID: 5282606849480932538}
   - component: {fileID: -4177619764765521978}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "Munici\xF3n"
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -106,4 +106,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3492ca112e14e464489eae3f745d22e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "munici\xF3n": 50
+  "munici\xF3n": 30

@@ -7,6 +7,7 @@ public class armas_controller_script : MonoBehaviour
 {
     public bool isFiring;
     public GameObject bullet;
+    public GameObject haz;
     public float BulletSpeed = 30;
     public float timeBetweenShots;
     private float shotCounter;
@@ -20,73 +21,97 @@ public class armas_controller_script : MonoBehaviour
     public float reloadTime = 1f;
     public float reloadCounter = 1f;
 
-
     public Text textoMunición;
 
     public bool infiniteAmmo;
-
     // Start is called before the first frame update
     void Start()
     {
-       textoMunición.text = currentAmmo.ToString() + "/" + reserveAmmo.ToString();
+        if (infiniteAmmo == true)
+        {
+            textoMunición.text = currentAmmo.ToString() + "/∞";
+        }
+        else
+        {
+            textoMunición.text = currentAmmo.ToString() + "/" + reserveAmmo.ToString();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (infiniteAmmo == true)
+        {
+            textoMunición.text = currentAmmo.ToString() + "/∞";
+        }
         reloadCounter -= Time.deltaTime;
         shotCounter -= Time.deltaTime;
         if (reloadCounter <= 0)
         {
-
+            
             if (isFiring == true)
             {
+                haz.SetActive(true);
 
                 if (shotCounter <= 0 && currentAmmo >= 1)
                 {
                     Shoot();
-
-                    textoMunición.text = currentAmmo.ToString() + "/" + reserveAmmo.ToString();
-
+                    if (infiniteAmmo == true)
+                    {
+                        textoMunición.text = currentAmmo.ToString() + "/∞";
+                    }
+                    else
+                    {
+                        textoMunición.text = currentAmmo.ToString() + "/" + reserveAmmo.ToString();
+                    }
                 }
 
             }
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Reload();
-
-                textoMunición.text = currentAmmo.ToString() + "/" + reserveAmmo.ToString();
-
+                if (infiniteAmmo == true)
+                {
+                    textoMunición.text = currentAmmo.ToString() + "/∞";
+                }
+                else
+                {
+                    textoMunición.text = currentAmmo.ToString() + "/" + reserveAmmo.ToString();
+                }
             }
         }
     }
     void Shoot()
     {
-
+       
         shotCounter = timeBetweenShots;
         GameObject newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as GameObject;
         balas_controller_script controller = (balas_controller_script)newBullet.GetComponent("balas_controller_script");
         controller.speed = BulletSpeed;
         if (Random.Range(0f, 100f) <= critChance)
         {
-
+            
             controller.damage = (int) (damage * critDamage);
-
-
+           
+           
         }
         else
         {
             controller.damage = (int)damage;
             Debug.DrawLine(newBullet.transform.position, newBullet.transform.position, Color.blue);
         }
-
+       
         currentAmmo -= 1;
     }
     void Reload()
     {
         reloadCounter = reloadTime;
 
-        if (infiniteAmmo == false) {
+        if(infiniteAmmo == true)
+        {
+            currentAmmo = maxAmmo;
+        }
+        else {
             if (currentAmmo == 0)
             {
                 if (reserveAmmo >= maxAmmo)
@@ -113,20 +138,21 @@ public class armas_controller_script : MonoBehaviour
                     currentAmmo += reserveAmmo;
                     reserveAmmo = 0;
                 }
-
             }
-        }
-        else
-        {
-
-            currentAmmo = maxAmmo;
-
         }
     }
 
     public void refrescarMunición(float munición)
     {
         reserveAmmo += munición;
-        textoMunición.text = currentAmmo.ToString() + "/" + reserveAmmo.ToString();
+
+        if (infiniteAmmo == true)
+        {
+            textoMunición.text = currentAmmo.ToString() + "/∞";
+        }
+        else
+        {
+            textoMunición.text = currentAmmo.ToString() + "/" + reserveAmmo.ToString();
+        }
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8113109480045422994}
   - component: {fileID: 1659735835472749163}
   - component: {fileID: -8722543369474409348}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "Botiqu\xEDn"
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -106,5 +106,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aac98ef79381ac44b725691468b2d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  salud: 50
+  salud: 300
   jugador: {fileID: 5019638639556231212, guid: ae7aa0bf7621ff5418444659eb33fe01, type: 3}

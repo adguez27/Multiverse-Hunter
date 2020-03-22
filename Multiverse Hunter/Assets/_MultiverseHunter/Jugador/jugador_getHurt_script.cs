@@ -8,7 +8,7 @@ public class jugador_getHurt_script : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag== "Player")
+        if(other.gameObject.tag== "Player2")
         {
             other.gameObject.GetComponent<jugador_healthManager_script>().HurtPlayer(damage);
         }

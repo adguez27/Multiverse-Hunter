@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8262417902234594849}
   - component: {fileID: 1824641014909418119}
   - component: {fileID: 562029642302445338}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: bala_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,11 +105,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fef6f39bb6d9e7f4dbdf728d4d704a70, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 30
   damage: 700
-
 --- !u!54 &562029642302445338
 Rigidbody:
   m_ObjectHideFlags: 0

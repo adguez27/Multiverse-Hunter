@@ -13,10 +13,8 @@ GameObject:
   - component: {fileID: 3945888539629076563}
   - component: {fileID: 4236028144984025452}
   - component: {fileID: 3049222283341474883}
-
   - component: {fileID: 1221722101895085959}
-
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bala Enemiga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,11 +105,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17cd1fd9a2b523845aa74732e5dd569b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 100
   damage: 100
-
 --- !u!54 &1221722101895085959
 Rigidbody:
   m_ObjectHideFlags: 0
