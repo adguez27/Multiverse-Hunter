@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9088297535655199177
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 615973909138883968, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_Name
+      value: Polvo Nevado
+      objectReference: {fileID: 0}
+    - target: {fileID: 615973909138883968, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086374634034809983, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086374634034809983, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086374634034809983, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4897881849343989972, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: EnemyTypes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4897881849343989972, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: EnemyTypes.Array.data[0]
+      value: 
+      objectReference: {fileID: 6921162184991090344, guid: a8156c94a6d5f9540b02fde3139ddfda,
+        type: 3}
+    - target: {fileID: 4897881849343989972, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: EnemyTypes.Array.data[1]
+      value: 
+      objectReference: {fileID: 1264901970080610757, guid: f3d35324ac87d714fb04b55f34727ec9,
+        type: 3}
+    - target: {fileID: 8964391802127442991, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964391802127442991, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964391802127442991, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964391802127442991, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964391802127442991, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964391802127442991, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964391802127442991, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964391802127442991, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964391802127442991, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964391802127442991, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964391802127442991, guid: f755bc1c82fb8f34b9cc989a785ec115,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f755bc1c82fb8f34b9cc989a785ec115, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8964391802127442991}
   - component: {fileID: 3086374634034809983}
   - component: {fileID: 6528474164495663177}
+  - component: {fileID: 4897881849343989972}
   m_Layer: 0
   m_Name: Polvo
   m_TagString: Untagged
@@ -4754,3 +4755,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &4897881849343989972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615973909138883968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7b275df7809434bb84dae1eff5b6ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyTypes:
+  - {fileID: 0}
+  - {fileID: 0}

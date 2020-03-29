@@ -20,7 +20,7 @@ public class enemigo_meleeController_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(objetivo.position, transform.position) != 0)
+        if ((Vector3.Distance(objetivo.position, transform.position) - 1.60) > 0)
         {
             ultimaPosicionObjetivo = objetivo.position;
             agente.SetDestination(ultimaPosicionObjetivo);
@@ -29,7 +29,7 @@ public class enemigo_meleeController_script : MonoBehaviour
         else
         {
             agente.isStopped = true;
-            GameObject.Find("Jugador").GetComponent<jugador_healthManager_script>().HurtPlayer(daño);
+            GameObject.Find("Jugador").GetComponentInChildren<jugador_healthManager_script>().HurtPlayer(daño);
         }
     }
 }

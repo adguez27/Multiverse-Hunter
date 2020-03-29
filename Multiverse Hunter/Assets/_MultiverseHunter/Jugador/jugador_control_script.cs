@@ -33,4 +33,5 @@ public class jugador_control_script : MonoBehaviour
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
     }
+
 }

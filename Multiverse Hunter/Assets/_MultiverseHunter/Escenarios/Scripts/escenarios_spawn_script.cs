@@ -44,7 +44,7 @@ public class escenarios_spawn_script : MonoBehaviour
                 int place = Random.Range(0, spawnList.Count);
                 GameObject spawnLocation = spawnList[place];
                 spawnLocation.GetComponent<escenarios_spawnController_scripts>().Spawn();
-                spawnCounter = Random.Range(2, 5);
+                spawnCounter = Random.Range(0, 4);
             }
         }
         if (hasBossSpawn == false)

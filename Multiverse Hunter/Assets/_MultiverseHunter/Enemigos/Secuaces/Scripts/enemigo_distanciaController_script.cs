@@ -53,7 +53,7 @@ public class enemigo_distanciaController_script : MonoBehaviour
             Debug.DrawRay(transform.position, dir.normalized * hit.distance, Color.yellow);
 
             // en caso de que esa capa sea el jugador, el enemigo ve al jugador (su enemigo)
-            if (hit.transform.CompareTag("Player")) veAlEnemigo = true;
+            if (hit.transform.CompareTag("Player2")) veAlEnemigo = true;
         }
         else
         {

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class balas_controller_script : MonoBehaviour
 {
@@ -13,7 +11,7 @@ public class balas_controller_script : MonoBehaviour
     void Start()
     {
 
-            Physics.IgnoreLayerCollision(12, 11);
+        Physics.IgnoreLayerCollision(12, 11);
     }
 
     // Update is called once per frame
@@ -38,7 +36,8 @@ public class balas_controller_script : MonoBehaviour
                 this.player.GetComponent<jugador_scoreManager_script>().puntuacion += collision.gameObject.GetComponent<enemig_healthManager_script>().points;
             }
         }
-        else if (collision.gameObject.tag == "Obstacle"){
+        else if (collision.gameObject.tag == "Obstacle")
+        {
             Destroy(gameObject);
         }
     }

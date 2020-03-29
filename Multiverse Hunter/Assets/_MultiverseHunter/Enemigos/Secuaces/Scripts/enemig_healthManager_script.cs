@@ -20,6 +20,8 @@ public class enemig_healthManager_script : MonoBehaviour
 
     private int contador = 0;
     public int points;
+
+    public GameObject portador;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,8 +50,9 @@ public class enemig_healthManager_script : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            barradeSalud.gameObject.SetActive(false);
             SoltarObjeto();
-            Destroy(gameObject);
+            Destroy(portador);
         }
 
         if (flashCounter > 0)
@@ -77,11 +80,11 @@ public class enemig_healthManager_script : MonoBehaviour
     {
         int valorAleatorio = Random.Range(0, 100);
 
-        if (valorAleatorio >= 0 && valorAleatorio <= 30)
+        if (valorAleatorio >= 0 && valorAleatorio <= 10)
         {
             Instantiate(botiquín, transform.position, Quaternion.identity);
         }
-        else if (valorAleatorio >= 70 && valorAleatorio <= 100)
+        else if (valorAleatorio >= 77 && valorAleatorio <= 100)
         {
             Instantiate(munición, transform.position, Quaternion.identity);
         }
